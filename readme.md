@@ -6,7 +6,19 @@ Stain normalization can reduce the color differences affected by various factors
 
 ## Model Architecture
 
-![StainPresetNet](./assets/StainPresetNet.png)
+![StainPresetNet](./assets/StainPresetNet.jpg)
+
+## Transform between multiple centers
+
+|      |                              C1                              |                              C2                              |                              C3                              |                              C4                              |                              C5                              |
+| ---- | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| C1   | ![C1_85_source_7328](./result/C1_85_source_7328/C1_85_source_7328.png) | ![C2_46_source_12318](./result/C1_85_source_7328/C2_46_source_12318.png) | ![C3_28_source_15437](./result/C1_85_source_7328/C3_28_source_15437.png) | ![C4_60_source_23330](./result/C1_85_source_7328/C4_60_source_23330.png) | ![C5_25_source_29176](./result/C1_85_source_7328/C5_25_source_29176.png) |
+| C2   | ![C1_85_source_7328](./result/C2_46_source_12318/C1_85_source_7328.png) | ![C2_46_source_12318](./result/C2_46_source_12318/C2_46_source_12318.png) | ![C3_28_source_15437](./result/C2_46_source_12318/C3_28_source_15437.png) | ![C4_60_source_23330](./result/C2_46_source_12318/C4_60_source_23330.png) | ![C5_25_source_29176](./result/C2_46_source_12318/C5_25_source_29176.png) |
+| C3   | ![C1_85_source_7328](./result/C3_28_source_15437/C1_85_source_7328.png) | ![C2_46_source_12318](./result/C3_28_source_15437/C2_46_source_12318.png) | ![C3_28_source_15437](./result/C3_28_source_15437/C3_28_source_15437.png) | ![C4_60_source_23330](./result/C3_28_source_15437/C4_60_source_23330.png) | ![C5_25_source_29176](./result/C3_28_source_15437/C5_25_source_29176.png) |
+| C4   | ![C1_85_source_7328](./result/C4_60_source_23330/C1_85_source_7328.png) | ![C2_46_source_12318](./result/C4_60_source_23330/C2_46_source_12318.png) | ![C3_28_source_15437](./result/C4_60_source_23330/C3_28_source_15437.png) | ![C4_60_source_23330](./result/C4_60_source_23330/C4_60_source_23330.png) | ![C5_25_source_29176](./result/C4_60_source_23330/C5_25_source_29176.png) |
+| C5   | ![C1_85_source_7328](./result/C5_25_source_29176/C1_85_source_7328.png) | ![C2_46_source_12318](./result/C5_25_source_29176/C2_46_source_12318.png) | ![C3_28_source_15437](./result/C5_25_source_29176/C3_28_source_15437.png) | ![C4_60_source_23330](./result/C5_25_source_29176/C4_60_source_23330.png) | ![C5_25_source_29176](./result/C5_25_source_29176/C5_25_source_29176.png) |
+
+
 
 ## Install
 
@@ -15,6 +27,20 @@ pip install requirements.txt
 ```
 
 ## Train
+
+Save images inside the folders in the format as shown below:
+
+```
+train
+   ├── Domain 1
+   |   ├── a.jpg  (name doesn't matter)
+   |   ├── b.jpg
+   |   └── ...
+   ├── Domain 2
+   |   ├── c.jpg
+   |   ├── d.jpg
+   |   └── ...
+```
 
 ```python
 python main.py --name [Your Exp Name] --train_dir_root [Path to data]
