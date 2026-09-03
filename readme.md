@@ -51,4 +51,15 @@ python main.py --name [Your Exp Name] --train_dir_root [Path to data]
 ```python
 python test.py
 ```
-
+## Cite
+```
+@misc{kang2026stainpresetnetstainpresetnetwork,
+      title={StainPresetNet: Stain Preset Network for Fast Multi-to-Multi Stain Normalization}, 
+      author={Hongtao Kang and Die Luo and Li Chen and Jing Cai and Junbo Hu and Xiuli Liu and Shenghua Cheng},
+      year={2026},
+      eprint={2609.01146},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2609.01146}, 
+}
+```
